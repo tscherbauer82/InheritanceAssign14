@@ -13,13 +13,13 @@ Vehicle::Vehicle() {
     yearBuilt = 0;
 }
 
-Vehicle::Vehicle(string manufacturer, int year) {
-    manufacturer = manufacturer;
+Vehicle::Vehicle(string m, int year) {
+    manufacturer = m;
     yearBuilt = year;
 }
 
-void Vehicle::setManufacturer(string manufacturer) {
-    manufacturer = manufacturer;
+void Vehicle::setManufacturer(string m) {
+    manufacturer = m;
 }
 
 string Vehicle::getManufacturer() const {

@@ -1,20 +1,52 @@
-// InheritanceAssign14.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//Tommy Scherbauer
+//CIS 1202.800
+//April 29, 2025
 
+#include"Vehicle.h"
+#include "Car.h"
+#include "Truck.h"
 #include <iostream>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+	string manufacturer;
+	int year;
+	int doors;
+	int towingCapacity;
+
+	//Input from user for manufacturer and year built, stored in Vehicle object
+	cout << "Enter Vehicle manufacturer:\n";
+	getline(cin, manufacturer);
+	cout << "Enter year built: \n";
+	cin >> year;
+	cin.ignore();
+	Vehicle vehicle(manufacturer, year);
+	vehicle.displayInfo();
+	cout << endl;
+
+	//Input from user for manufacturer and year built, stored in Car object
+	cout << "Enter Vehicle manufacturer:\n";
+	getline(cin, manufacturer);
+	cout << "Enter year built: \n";
+	cin >> year;
+	cout << "Enter the number of doors: ";
+	cin >> doors;
+	cin.ignore();
+	Car car(manufacturer, year, doors);
+	car.displayInfo();
+	cout << endl;
+
+	//Input from user for manufacturer and year built, stored in Truck object
+	cout << "Enter Truck manufacturer:\n";
+	getline(cin, manufacturer);
+	cout << "Enter year built: \n";
+	cin >> year;
+	cout << "Enter the towing capacity (in lbs): ";
+	cin >> towingCapacity;
+	cin.ignore();
+	Truck truck(manufacturer, year, towingCapacity);
+	truck.displayInfo();
+	cout << endl;
+
+	return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
