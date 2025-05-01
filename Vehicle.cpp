@@ -8,23 +8,34 @@
 #include <iostream>
 using namespace std;
 
-void Vehicle::setManufacturer(string manufacturer) {
-	manufacturer = manufacturer;
+Vehicle::Vehicle() {
+    manufacturer = "";
+    yearBuilt = 0;
 }
 
-string Vehicle::getManufacturer() {
-	return manufacturer;
+Vehicle::Vehicle(string manufacturer, int year) {
+    manufacturer = manufacturer;
+    yearBuilt = year;
+}
+
+void Vehicle::setManufacturer(string manufacturer) {
+    manufacturer = manufacturer;
+}
+
+string Vehicle::getManufacturer() const {
+    return manufacturer;
 }
 
 void Vehicle::setYearBuilt(int year) {
-	yearBuilt = year;
+    yearBuilt = year;
 }
 
-int Vehicle::getYearBuilt() {
-	return yearBuilt;
+int Vehicle::getYearBuilt() const {
+    return yearBuilt;
 }
 
-void Vehicle::displayInfo() {
-	cout << manufacturer << endl;
-	cout << yearBuilt << endl;
+void Vehicle::displayInfo() const {
+    cout << "Vehicle Information:\n";
+    cout << "Manufacturer: " << manufacturer << endl;
+    cout << "Year Built: " << yearBuilt << endl;
 }

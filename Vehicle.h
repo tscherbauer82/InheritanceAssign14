@@ -11,19 +11,21 @@
 using namespace std;
 
 class Vehicle {
+private:
+    string manufacturer;
+    int yearBuilt;
 
-	string manufacturer;
-	int yearBuilt;
+public:
+    Vehicle();
+    Vehicle(string, int);
 
-	//setter and getter for Manufacturer
-	void setManufacturer(string);
-	string getManufacturer();
+    void setManufacturer(string);
+    string getManufacturer() const;
 
-	//setter and getter for YearBuilt
-	void setYearBuilt(int);
-	int getYearBuilt();
+    void setYearBuilt(int);
+    int getYearBuilt() const;
 
-	void displayInfo();
+    virtual void displayInfo() const;
 };
 
 #endif
